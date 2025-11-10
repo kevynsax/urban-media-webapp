@@ -24,7 +24,7 @@ npm install
 npm start
 ```
 
-O aplicativo estará disponível em `http://localhost:5173/urban-media`
+O aplicativo estará disponível em `http://localhost:5173`
 
 ### Build para Produção
 
@@ -53,7 +53,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-O aplicativo estará disponível em `http://localhost:8080/urban-media`
+O aplicativo estará disponível em `http://localhost:8080`
 
 **Opção 2: Docker manual**
 
@@ -81,13 +81,13 @@ docker rm urban-media-kiosk
 Se você estiver usando nginx como proxy reverso no servidor principal:
 
 ```nginx
-# /etc/nginx/sites-available/kevyn.com.br
+# /etc/nginx/sites-available/kiosk.kevyn.com.br
 server {
     listen 80;
-    server_name kevyn.com.br;
+    server_name kiosk.kevyn.com.br;
 
-    location /urban-media {
-        proxy_pass http://localhost:8080/urban-media;
+    location / {
+        proxy_pass http://localhost:8080/;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';

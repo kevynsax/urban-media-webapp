@@ -19,7 +19,7 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copiar build para o Nginx
-COPY --from=builder /app/dist /usr/share/nginx/html/urban-media
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Copiar configuração customizada do Nginx
 COPY nginx.conf /etc/nginx/conf.d/default.conf
@@ -29,7 +29,7 @@ EXPOSE 80
 
 # Healthcheck
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-  CMD wget --no-verbose --tries=1 --spider http://localhost/urban-media/ || exit 1
+  CMD wget --no-verbose --tries=1 --spider http://localhost || exit 1
 
 # Iniciar Nginx
 CMD ["nginx", "-g", "daemon off;"]
