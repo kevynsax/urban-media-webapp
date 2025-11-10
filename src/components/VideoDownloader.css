@@ -1,0 +1,143 @@
+.video-downloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.downloader-container {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.downloader-container h1 {
+  margin: 0 0 30px 0;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.overall-progress {
+  margin-bottom: 30px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #555;
+}
+
+.progress-percentage {
+  color: #667eea;
+}
+
+.progress-bar {
+  height: 12px;
+  background: #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.progress-bar.small {
+  height: 6px;
+  margin-top: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+  border-radius: 6px;
+}
+
+.progress-fill.overall {
+  background: linear-gradient(90deg, #48bb78 0%, #38a169 100%);
+}
+
+.videos-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.video-item {
+  padding: 16px;
+  background: #f7fafc;
+  border-radius: 8px;
+  border-left: 4px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.video-item.pending {
+  border-left-color: #cbd5e0;
+}
+
+.video-item.downloading {
+  border-left-color: #667eea;
+  background: #edf2f7;
+}
+
+.video-item.completed {
+  border-left-color: #48bb78;
+  background: #f0fff4;
+}
+
+.video-item.error {
+  border-left-color: #f56565;
+  background: #fff5f5;
+}
+
+.video-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-name {
+  font-weight: 500;
+  color: #2d3748;
+  flex: 1;
+  text-transform: capitalize;
+}
+
+.video-status {
+  font-size: 14px;
+  color: #718096;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .downloader-container {
+    padding: 24px;
+  }
+
+  .downloader-container h1 {
+    font-size: 20px;
+  }
+
+  .video-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .video-status {
+    font-size: 13px;
+  }
+}
+
