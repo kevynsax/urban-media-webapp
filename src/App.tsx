@@ -5,13 +5,14 @@ import type { VideoItem } from './types';
 import './App.css';
 
 const VIDEO_URLS = [
-  'https://miscelanias.s3.us-east-1.amazonaws.com/santo_beef.mp4',
-  'https://miscelanias.s3.us-east-1.amazonaws.com/renner.mp4',
-  'https://miscelanias.s3.us-east-1.amazonaws.com/pizza_hut.mp4',
-  'https://miscelanias.s3.us-east-1.amazonaws.com/mc_donald.mp4',
-  'https://miscelanias.s3.us-east-1.amazonaws.com/fast_escova.mp4',
-  'https://miscelanias.s3.us-east-1.amazonaws.com/espaco_laser.mp4',
-  'https://miscelanias.s3.us-east-1.amazonaws.com/coco_bambu.mp4',
+  'https://miscelanias.s3.us-east-1.amazonaws.com/coco_bambu_1codec.mp4'
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/santo_beef.mp4',
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/renner.mp4',
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/pizza_hut.mp4',
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/mc_donald.mp4',
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/fast_escova.mp4',
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/espaco_laser.mp4',
+  // 'https://miscelanias.s3.us-east-1.amazonaws.com/coco_bambu.mp4',
 ];
 
 function App() {
